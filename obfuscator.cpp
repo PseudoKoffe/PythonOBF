@@ -41,8 +41,8 @@ int main() {
     std::cin.ignore();
     
     if (choice == 1) {
-        // ДЕФОЛТНЫЙ URL - ИЗМЕНИ НА СВОЙ ПОСЛЕ ЗАГРУЗКИ DLL
-        dllUrl = "https://github.com/PseudoKoffe/PythonOBFdll/releases/download/v1.0/libprotect.dll";
+        
+        dllUrl = "https://github.com/PseudoKoffe/PythonOBF/releases/download/dll.OBF/libprotect.dll";
         std::cout << "[INFO] Using default URL\n";
     } else {
         std::cout << "\n[URL] > ";
@@ -68,8 +68,7 @@ int main() {
     std::string code((std::istreambuf_iterator<char>(inputFile)), std::istreambuf_iterator<char>());
     inputFile.close();
     
-    // XOR ключ (должен совпадать с ключом в DLL)
-    const unsigned char xorKey[] = {0x4B, 0x45, 0x59, 0x5F, 0x32, 0x30, 0x32, 0x36};
+    const unsigned char xorKey[] = {0x4C, 0x6F, 0x76, 0x65, 0x5F, 0x43, 0x6F, 0x66, 0x66, 0x65};
     
     for (size_t i = 0; i < code.size(); i++) {
         code[i] = code[i] ^ xorKey[i % 8];
