@@ -13,7 +13,7 @@ __declspec(dllexport) int ValidateKey(const char* userKey) {
 __declspec(dllexport) int ExecuteCode(const char* encrypted, int len, const char* authKey) {
     if (!ValidateKey(authKey)) return -1;
     
-    const unsigned char xorKey[] = {0x4B, 0x45, 0x59, 0x5F, 0x32, 0x30, 0x32, 0x36};
+    const unsigned char xorKey[] = {0x4C, 0x6F, 0x76, 0x65, 0x5F, 0x43, 0x6F, 0x66, 0x66, 0x65};
     
     char* decrypted = (char*)malloc(len + 1);
     if (!decrypted) return -2;
