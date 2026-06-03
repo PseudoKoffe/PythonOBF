@@ -1,4 +1,5 @@
-Compilation using the MSYS2 UCRT64 terminal and the GCC compiler
+Compilation using the MSYS2 UCRT64 terminal and the GCC compiler.
+
 
 < Compiling DLL >
 g++ -static -shared -o libprotect.dll libprotect.cpp -Wl,--kill-at
